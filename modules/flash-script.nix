@@ -111,6 +111,13 @@ in
         url = "https://github.com/NVIDIA/edk2-nvidia/commit/df0ff1aff5ecd9f343ce5409234c9ef071124d44.patch";
         sha256 = "sha256-8J+Ip1n7np+VWtdeA0RoKHT3fdo8rsDxKXGkVSROnvA=";
       })
+
+      # Fix UEFI Capsule updates on Xavier NXs
+      # https://github.com/NVIDIA/edk2-nvidia/pull/43
+      (pkgs.fetchpatch {
+        url = "https://github.com/NVIDIA/edk2-nvidia/commit/931fdbbd3b0fc146d01cf944075288195149324e.patch";
+        sha256 = "sha256-95ZPg3f+iJ7udTrQTFbutMukqfQoDU5Lf+0lgCvYWtI=";
+      })
     ];
 
     systemd.services = lib.mkIf (cfg.flashScriptOverrides.targetBoard != null) {
