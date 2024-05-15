@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+    nixpkgs.url = "github:danielfullmer/nixpkgs/cuda-cmake-workaround";
   };
 
   outputs = { self, nixpkgs, ... }@inputs:

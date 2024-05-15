@@ -63,6 +63,7 @@ let
         cc = gcc9Stdenv.cc.cc;
         useCcForLibs = true;
         gccForLibs = stdenv.cc.cc.lib;
+        cmakeWorkaround = true;
       };
 
   cudaVersionDashes = lib.replaceStrings [ "." ] [ "-" ] cudaVersion;
